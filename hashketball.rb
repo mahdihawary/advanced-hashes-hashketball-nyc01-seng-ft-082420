@@ -1,3 +1,4 @@
+require 'pry'
 # Write your code below game_hash
 def game_hash
   {
@@ -127,3 +128,19 @@ def game_hash
 end
 
 # Write code here
+
+def num_points_scored(player_name)
+ game_hash.each do |key,team|
+    team.each do |type,data|
+      if type == :players
+        
+        data.each do |player|
+          
+          if player[:player_name]==player_name
+            return player[:points]
+          end
+        end
+      end
+    end
+  end
+  end
