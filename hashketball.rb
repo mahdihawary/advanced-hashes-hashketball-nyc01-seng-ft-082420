@@ -192,21 +192,20 @@ def player_numbers(team_name)
 end
 
 def player_stats(player_name)
-  stats={}
-  game_hash.collect do |key,team|
-    team.each do |type,data|
+  stats = {}
+  game_hash.collect do |key, team|
+    team.each do |type, data|
       next unless type == :players
-        game_hash[key][type].each do |player|
-          next unless player[:player_name] ==player_name 
-            
-            
-            stats= player.delete_if do |key, value|
-              key ==:player_name
-            end
-          end
+
+      game_hash[key][type].each do |player|
+        next unless player[:player_name] == player_name
+
+        stats = player.delete_if do |key, value|
+          key == :player_name
         end
-      
-   
+      end
+    end
+  end
   stats
 end
         
