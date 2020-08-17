@@ -198,7 +198,8 @@ def player_stats(player_name)
       if type == :players
         data.each do |player|
           if player[:player_name]==player_name 
-            
+            stats= player.delete_if do |key, value|
+              
 end
 
 
