@@ -182,7 +182,7 @@ def player_numbers(team_name)
       team.each do |type,data|
         if type == :players
           data.each do |player|
-            jersey_num << data[:number]
+            jersey_num << player[:number]
           end
         end
       end
