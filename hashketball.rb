@@ -180,7 +180,6 @@ def player_numbers(team_name)
   game_hash.each do |key,team|
     if team[:team_name]==team_name
       team.each do |type,data|
-        if type== :players
           data.each do |player|
             jersey_num << 
     end
