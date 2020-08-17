@@ -168,10 +168,11 @@ def team_colors(team_name)
   end
 end
 
-def team_names(team_name)
-  game_hash.each do |key_team|
-    if team[:team_name]==team_name
+def team_names
+  team_array = []
+  game_hash.each do |key,team|
+    team_array << game_hash[key][team_name]
       
-    end
   end
+  team_array
 end
