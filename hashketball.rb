@@ -160,4 +160,12 @@ def num_points_scored(player_name)
     end
   end
 end
+def team_colors(team_name)
+  game_hash.each do |key,team|
+    if team[:team_name]==team_name
+      return game_hash[key][:colors]
+    end
+  end
+end
+
 
