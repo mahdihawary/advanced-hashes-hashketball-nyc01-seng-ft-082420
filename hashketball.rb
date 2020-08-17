@@ -195,16 +195,16 @@ def player_stats(player_name)
   stats={}
   game_hash.collect do |key,team|
     team.each do |type,data|
-      if type == :players
+      next unless player[:player_name] ==player_name
         game_hash[key][type].each do |player|
-          if player[:player_name]==player_name 
+          next unless player[:player_name] ==player_name 
             
             
             stats= player.delete_if do |key, value|
               key ==:player_name
             end
-          end
-        end
+          
+        
       end
     end
   end
