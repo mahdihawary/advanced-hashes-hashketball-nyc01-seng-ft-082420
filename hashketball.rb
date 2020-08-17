@@ -208,7 +208,7 @@ def player_stats(player_name)
   stats
 end
         
-  def big_shoe_rebounds
+def big_shoe_rebounds
   biggest_shoe = 0
   num_rebounds = 0
 
@@ -219,7 +219,8 @@ end
         num_rebounds = player[:rebounds]
       end
     end
-  end   
+  end 
+end
   
 
 
