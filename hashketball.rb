@@ -201,7 +201,7 @@ def player_stats(player_name)
         next unless player[:player_name] == player_name
 
         stats = player
-        end
+        
       end
     end
   end
