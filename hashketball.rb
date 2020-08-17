@@ -195,5 +195,13 @@ def player_stats(player_name)
   stats={}
   game_hash.collect do |key,team|
     team.each do |type,data|
-      if 
+      if type == :players
+        data.each do |player|
+          if player[:player_name]==player_name 
+            
 end
+
+
+
+
+
