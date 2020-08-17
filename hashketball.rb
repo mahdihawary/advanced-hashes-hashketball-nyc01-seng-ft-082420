@@ -193,5 +193,6 @@ end
 
 def player_stats(player_name)
   stats={}
-  
+  game_hash.collect do |key,team|
+    if 
 end
